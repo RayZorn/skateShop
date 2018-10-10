@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import static org.junit.Assert.*;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.*;
@@ -13,40 +14,29 @@ import org.mockito.Mockito.*;
 
 import skateshop.Decks;
 import skateshop.Shoes;
+import skateshop.SkateFloor;
 import skateshop.Trucks;
 import skateshop.Wheels;
 
 public class ShopTest {
 	
-	Decks d;
+	SkateFloor sf;
 	Shoes s;
 	Trucks t;
 	Wheels w;
+	Decks d;
 	
-	char choice;
+	int a,b;
 	
 
-	@Before
-	public void setUp() throws Exception {
-		
-		choice='0';
-		
-		d = new Decks(0, " ", 0);
-		s = new Shoes(0, " ", 0);
-		t = new Trucks(0, " ", 0);
-		w = new Wheels(0, " ", 0);
-		
-
-		
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
+	
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testCalc() {
+		a = 20;
+		b = 10;
+		
+		int ans = d.calculate(a, b);
+		
+		assertEquals(10, ans);		
 	}
-
 }
